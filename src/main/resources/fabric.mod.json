@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "rings",
+  "version": "${version}",
+
+  "name": "Rings",
+  "description": "Adds rings which apply potion effects.",
+  "authors": [
+    "Giantpotato"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "cc0-1.0",
+  "icon": "assets/rings/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.giantpotato.rings.Rings"
+    ]
+  },
+  "mixins": [
+
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
