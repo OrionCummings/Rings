@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rings:alexandrite_ore"
+  },
+  "result": "rings:alexandrite",
+  "experience": 2,
+  "cookingtime": 200,
+  "group": "rings"
+}
