@@ -20,18 +20,12 @@ Holding all of your rings in your hotbar is quite difficult, especially when you
 
 ## Items
 ### Common Gems
-##### Found anywhere below sea level in the overworld, common gems offer the player a way to get started with rings. These gems are too weak to be used in powerful rings
-#### Ruby
-##### This firey gem 
-#### Azurite
-#####
-#### Peridot
-#####
+##### The three common gems are ruby, peridot, and azurite. Found anywhere below sea level in the overworld, these common gems offer the player a way to get started with rings without giving too much. These gems are too weak to be used in powerful rings but they still provide utility to those with enough of them.
 
 ### Rare Gems
 #### Alexandrite
-##### This pearlescent gem is exceedingly rare, but can be crafted into Mythic rings.
+##### This pearlescent gem is exceedingly rare, but can be crafted into Mythic rings which hold enormous power.
 
 ### Forbidden Gems
-#### Not much is known about these gems save for their incredible power. There are tales of those who tried to contain their awesome power
+#### Not much is known about these gems save for their incredible power. There are ancient tales of those who tried to contain their power through the art of rings but they all end in failure. Nobody has seen a forbidden gem in ages and people seem to think they are fading into obscurity...
 
