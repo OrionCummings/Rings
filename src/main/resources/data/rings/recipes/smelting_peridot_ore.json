@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rings:peridot_ore"
+  },
+  "result": "rings:peridot",
+  "experience": 2,
+  "cookingtime": 200,
+  "group": "rings"
+}

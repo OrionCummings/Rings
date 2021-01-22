@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rings:azurite_ore"
+  },
+  "result": "rings:azurite",
+  "experience": 2,
+  "cookingtime": 200,
+  "group": "rings"
+}

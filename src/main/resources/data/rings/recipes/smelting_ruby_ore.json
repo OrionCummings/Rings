@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "rings:ruby_ore"
+  },
+  "result": "rings:ruby",
+  "experience": 2,
+  "cookingtime": 200,
+  "group": "rings"
+}
