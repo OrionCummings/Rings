@@ -1,5 +1,4 @@
-![Rings](https://imgur.com/KgMypmH)
-Format: ![Alt Text](url)
+![](https://imgur.com/KgMypmH)
 
 # Rings
 Rings is a Fabric mod for Minecraft 1.16.5 that adds wearable rings that give the player potion effects.
