@@ -1,8 +1,12 @@
 {
   "itemGroup.rings.advanced_group": "Rings",
   "item.rings.ring": "Ring",
-  "item.rings.azurite": "Azurite",
   "item.rings.ruby": "Ruby",
+  "item.rings.peridot": "Peridot",
+  "item.rings.azurite": "Azurite",
+  "item.rings.alexandrite": "Alexandrite",
   "block.rings.azurite_ore": "Azurite Ore",
-  "block.rings.ruby_ore": "Ruby Ore"
+  "block.rings.ruby_ore": "Ruby Ore",
+  "block.rings.peridot_ore": "Peridot Ore",
+  "block.rings.alexandrite_ore": "Alexandrite Ore"
 }

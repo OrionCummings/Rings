@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import org.lwjgl.system.CallbackI;
 
 //Rings: Ring, Ring of Swiftness, Ring of Haste, ...
 //Gems: Ruby, Peridot, Azurite, Alexandrite
@@ -24,9 +25,13 @@ public class Rings implements ModInitializer {
                 //Items appear in this order in the creative tab "Rings"
                 stacks.add(new ItemStack(ModItems.RING));
                 stacks.add(new ItemStack(ModBlocks.RUBY_ORE));
+                stacks.add(new ItemStack(ModBlocks.PERIDOT_ORE));
                 stacks.add(new ItemStack(ModBlocks.AZURITE_ORE));
+                stacks.add(new ItemStack(ModBlocks.ALEXANDRITE_ORE));
                 stacks.add(new ItemStack(ModItems.RUBY));
+                stacks.add(new ItemStack(ModItems.PERIDOT));
                 stacks.add(new ItemStack(ModItems.AZURITE));
+                stacks.add(new ItemStack(ModItems.ALEXANDRITE));
             }).build();
 
     @Override
