@@ -27,5 +27,5 @@ Holding all of your rings in your hotbar is quite difficult, especially when you
 ##### This pearlescent gem is exceedingly rare, but can be crafted into Mythic rings which hold enormous power.
 
 ### Forbidden Gems
-#### Not much is known about these gems save for their incredible power. There are ancient tales of those who tried to contain their power through the art of rings but they all end in failure. Nobody has seen a forbidden gem in ages and people seem to think they are fading into obscurity...
+##### Not much is known about these gems save for their incredible power. No one even remembers the names of these most dangerous gemstones, only that there exists two types. There are ancient tales of those who tried to contain their power through the art of rings but they all end in failure. Nobody has seen a forbidden gem in ages and people seem to think they are fading into obscurity...
 
