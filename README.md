@@ -1,6 +1,6 @@
 # Rings
 Rings is a Fabric mod for Minecraft 1.16.5 that adds wearable rings that give the player potion effects.
-
+---
 ## Ring Types
 ### Ring
 The standard ring which does not grant the wearer any effects. An intermediate crafting ingredient for all types of rings.
@@ -15,6 +15,8 @@ Increases mining speed of wearer
 
 ## Ring Pouch
 Holding all of your rings in your hotbar is quite difficult, especially when you only have two big fingers. The Ring Pouch addresses this issue, giving the player more space to hold rings without losing any utility.
+
+***
 
 ## Items
 ### Common Gems
