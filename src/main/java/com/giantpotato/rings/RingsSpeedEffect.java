@@ -1,5 +1,6 @@
 package com.giantpotato.rings;
 
+import com.giantpotato.rings.registry.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -7,8 +8,8 @@ import net.minecraft.entity.effect.StatusEffectType;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 
-public class ExpStatusEffect extends StatusEffect {
-    public ExpStatusEffect(){
+public class RingsSpeedEffect extends StatusEffect {
+    public RingsSpeedEffect(){
         super(StatusEffectType.BENEFICIAL, 0x33EE55);
     }
 
@@ -22,13 +23,11 @@ public class ExpStatusEffect extends StatusEffect {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (entity instanceof PlayerEntity) {
-            //((PlayerEntity) entity).addExperience(1 << amplifier); // Higher amplifier gives you EXP faster
-            //((PlayerEntity) entity).addCritParticles(entity);
-            if(((PlayerEntity) entity).isSprinting()){
+            if(((PlayerEntity) entity).isSprinting() &&
+                    ((PlayerEntity) entity).isHolding(ModItems.AZURITE_RING)){
                 StatusEffectInstance speed_effect = new StatusEffectInstance(StatusEffects.SPEED, 0, 1 << amplifier, false, false);
                 ((PlayerEntity) entity).applyStatusEffect(speed_effect);
             }
         }
     }
-
 }

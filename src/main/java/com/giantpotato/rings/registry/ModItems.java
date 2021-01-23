@@ -1,5 +1,6 @@
 package com.giantpotato.rings.registry;
 
+import com.giantpotato.rings.AzuriteRing;
 import com.giantpotato.rings.Rings;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -25,9 +26,10 @@ public class ModItems{
 
     //Common Rings
     public static final Item RING = new Item(new Item.Settings().group(Rings.advanced_group));
-    public static final Item RUBY_RING = new Item(new Item.Settings().group(Rings.advanced_group));
-    public static final Item PERIDOT_RING = new Item(new Item.Settings().group(Rings.advanced_group));
-    public static final Item AZURITE_RING = new Item(new Item.Settings().group(Rings.advanced_group));
+    public static final Item RUBY_RING = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.UNCOMMON).maxDamage(256));
+    public static final Item PERIDOT_RING = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.UNCOMMON).maxDamage(256));
+    //public static final Item AZURITE_RING = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.UNCOMMON).maxDamage(256));
+    public static final Item AZURITE_RING = new AzuriteRing(new Item.Settings());
 
     public static void registerItems(){
         //Gem Registration

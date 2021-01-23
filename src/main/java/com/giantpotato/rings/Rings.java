@@ -6,7 +6,6 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -61,7 +60,7 @@ public class Rings implements ModInitializer {
     //Rare Gems
     private static ConfiguredFeature<?, ?> ORE_ALEXANDRITE = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.ALEXANDRITE_ORE.getDefaultState(), rareGemOre.getVeinSize())).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, rareGemOre.getMinY(), rareGemOre.getMaxY()))).spreadHorizontally().repeat(rareGemOre.getVeinsPerChunk());
 
-    public static void generateOres(){
+    public static void registerOres(){
         //Common Gems
         //Ruby Ore
         RegistryKey<ConfiguredFeature<?, ?>> oreRuby = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
@@ -89,17 +88,21 @@ public class Rings implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandrite);
     }
 
-    public static final StatusEffect EXP = new ExpStatusEffect();
+    public static final StatusEffect RINGS_SPEED = new RingsSpeedEffect();
 
     public static void registerStatusEffects(){
-        Registry.register(Registry.STATUS_EFFECT, new Identifier("rings", "exp"), EXP);
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("rings", "speed"), RINGS_SPEED);
     }
 
     @Override
     public void onInitialize() {
         ModItems.registerItems();
+        System.out.println("Rings: Registered Items");
         ModBlocks.RegisterBlocks();
+        System.out.println("Rings: Registered Blocks");
         registerStatusEffects();
-        generateOres();
+        System.out.println("Rings: Registered Status Effects");
+        registerOres();
+        System.out.println("Rings: Registered Ores");
     }
 }

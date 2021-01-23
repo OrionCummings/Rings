@@ -4,6 +4,7 @@
   "item.rings.ruby_ring": "Ruby Ring",
   "item.rings.peridot_ring": "Peridot Ring",
   "item.rings.azurite_ring": "Azurite Ring",
+  "item.rings.azurite_ring.tooltip": "A ring full of movement",
   "item.rings.ruby": "Ruby",
   "item.rings.peridot": "Peridot",
   "item.rings.azurite": "Azurite",
@@ -12,5 +13,5 @@
   "block.rings.ruby_ore": "Ruby Ore",
   "block.rings.peridot_ore": "Peridot Ore",
   "block.rings.alexandrite_ore": "Alexandrite Ore",
-  "effect.rings.exp": "Experience"
+  "effect.rings.speed": "Speed"
 }
