@@ -29,17 +29,6 @@ public class Rings implements ModInitializer {
 
     public static final String MOD_ID = "rings";
 
-    //Ore Generation Values
-    public static final int commonGemMaxY = 64;
-    public static final int commonGemMinY = 0;
-    public static final int commonGemVeinSize = 3;
-    public static final int commonGemVeinsPerChunk = 20;//way too high
-
-    public static final int rareGemMaxY = 20;
-    public static final int rareGemMinY = 0;
-    public static final int rareGemVeinSize = 3;
-    public static final int rareGemVeinsPerChunk = 20;//way too high
-
     public static final ItemGroup advanced_group = FabricItemGroupBuilder.create(
             new Identifier(MOD_ID, "advanced_group"))
             .icon(() -> new ItemStack(ModItems.RING))
@@ -56,13 +45,17 @@ public class Rings implements ModInitializer {
                 stacks.add(new ItemStack(ModItems.ALEXANDRITE));
             }).build();
 
+    //Ore Generator Values
+    public static GemOre commonGemOre = new GemOre(64, 0, 4, 10);
+    public static GemOre rareGemOre = new GemOre(20, 0, 3, 1);
+
     //Common Gems
-    private static ConfiguredFeature<?, ?> ORE_RUBY= Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.RUBY_ORE.getDefaultState(), commonGemVeinSize)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, commonGemMinY, commonGemMaxY))).spreadHorizontally().repeat(commonGemVeinsPerChunk);
-    private static ConfiguredFeature<?, ?> ORE_PERIDOT= Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.PERIDOT_ORE.getDefaultState(), commonGemVeinSize)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, commonGemMinY, commonGemMaxY))).spreadHorizontally().repeat(commonGemVeinsPerChunk);
-    private static ConfiguredFeature<?, ?> ORE_AZURITE= Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.AZURITE_ORE.getDefaultState(), commonGemVeinSize)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, commonGemMinY, commonGemMaxY))).spreadHorizontally().repeat(commonGemVeinsPerChunk);
+    private static ConfiguredFeature<?, ?> ORE_RUBY= Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.RUBY_ORE.getDefaultState(), commonGemOre.getVeinSize())).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, commonGemOre.getMinY(), commonGemOre.getMaxY()))).spreadHorizontally().repeat(commonGemOre.getVeinsPerChunk());
+    private static ConfiguredFeature<?, ?> ORE_PERIDOT= Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.PERIDOT_ORE.getDefaultState(), commonGemOre.getVeinSize())).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, commonGemOre.getMinY(), commonGemOre.getMaxY()))).spreadHorizontally().repeat(commonGemOre.getVeinsPerChunk());
+    private static ConfiguredFeature<?, ?> ORE_AZURITE= Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.AZURITE_ORE.getDefaultState(), commonGemOre.getVeinSize())).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, commonGemOre.getMinY(), commonGemOre.getMaxY()))).spreadHorizontally().repeat(commonGemOre.getVeinsPerChunk());
 
     //Rare Gems
-    private static ConfiguredFeature<?, ?> ORE_ALEXANDRITE = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.ALEXANDRITE_ORE.getDefaultState(), rareGemVeinSize)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, rareGemMinY, rareGemMaxY))).spreadHorizontally().repeat(rareGemVeinsPerChunk);
+    private static ConfiguredFeature<?, ?> ORE_ALEXANDRITE = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.ALEXANDRITE_ORE.getDefaultState(), rareGemOre.getVeinSize())).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, rareGemOre.getMinY(), rareGemOre.getMaxY()))).spreadHorizontally().repeat(rareGemOre.getVeinsPerChunk());
 
     public static void generateOres(){
         //Common Gems
