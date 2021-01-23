@@ -46,7 +46,7 @@ public class Rings implements ModInitializer {
             }).build();
 
     //Ore Generator Values
-    public static GemOre commonGemOre = new GemOre(64, 0, 4, 10);
+    public static GemOre commonGemOre = new GemOre(64, 0, 4, 3);
     public static GemOre rareGemOre = new GemOre(20, 0, 3, 1);
 
     //Common Gems
