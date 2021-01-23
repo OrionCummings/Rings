@@ -36,6 +36,9 @@ public class Rings implements ModInitializer {
             .appendItems(stacks -> {
                 //Items appear in this order in the creative tab "Rings"
                 stacks.add(new ItemStack(ModItems.RING));
+                stacks.add(new ItemStack(ModItems.RUBY_RING));
+                stacks.add(new ItemStack(ModItems.PERIDOT_RING));
+                stacks.add(new ItemStack(ModItems.AZURITE_RING));
                 stacks.add(new ItemStack(ModBlocks.RUBY_ORE));
                 stacks.add(new ItemStack(ModBlocks.PERIDOT_ORE));
                 stacks.add(new ItemStack(ModBlocks.AZURITE_ORE));

@@ -1,6 +1,9 @@
 {
   "itemGroup.rings.advanced_group": "Rings",
   "item.rings.ring": "Ring",
+  "item.rings.ruby_ring": "Ruby Ring",
+  "item.rings.peridot_ring": "Peridot Ring",
+  "item.rings.azurite_ring": "Azurite Ring",
   "item.rings.ruby": "Ruby",
   "item.rings.peridot": "Peridot",
   "item.rings.azurite": "Azurite",
