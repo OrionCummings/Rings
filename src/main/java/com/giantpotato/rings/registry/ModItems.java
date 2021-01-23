@@ -3,17 +3,19 @@ package com.giantpotato.rings.registry;
 import com.giantpotato.rings.Rings;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems{
 
-    //Gems
-    public static final Item AZURITE = new Item(new Item.Settings().group(Rings.advanced_group));
-    public static final Item RUBY = new Item(new Item.Settings().group(Rings.advanced_group));
-    public static final Item PERIDOT = new Item(new Item.Settings().group(Rings.advanced_group));
-    public static final Item ALEXANDRITE = new Item(new Item.Settings().group(Rings.advanced_group));
+    //Common Gems
+    public static final Item AZURITE = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.COMMON));
+    public static final Item RUBY = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.COMMON));
+    public static final Item PERIDOT = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.COMMON));
+
+    //Rare Gems
+    public static final Item ALEXANDRITE = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.RARE));
 
     //Block Items
     public static final BlockItem RUBY_ORE = new BlockItem(ModBlocks.RUBY_ORE, new Item.Settings().group(Rings.advanced_group));

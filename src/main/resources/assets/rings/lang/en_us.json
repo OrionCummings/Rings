@@ -8,5 +8,6 @@
   "block.rings.azurite_ore": "Azurite Ore",
   "block.rings.ruby_ore": "Ruby Ore",
   "block.rings.peridot_ore": "Peridot Ore",
-  "block.rings.alexandrite_ore": "Alexandrite Ore"
+  "block.rings.alexandrite_ore": "Alexandrite Ore",
+  "effect.rings.exp": "Experience"
 }

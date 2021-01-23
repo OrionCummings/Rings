@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -85,10 +86,17 @@ public class Rings implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandrite);
     }
 
+    public static final StatusEffect EXP = new ExpStatusEffect();
+
+    public static void registerStatusEffects(){
+        Registry.register(Registry.STATUS_EFFECT, new Identifier("rings", "exp"), EXP);
+    }
+
     @Override
     public void onInitialize() {
         ModItems.registerItems();
         ModBlocks.RegisterBlocks();
+        registerStatusEffects();
         generateOres();
     }
 }
