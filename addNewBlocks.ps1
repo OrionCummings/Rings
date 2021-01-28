@@ -2,7 +2,8 @@
 # Does not change en_us.json (yet)
 
 $name=$args[0]
-Write-Host "Attempting to create new block"$name"!" 
+Write-Host "Attempting to create new block"$name"!"
+Write-Host "`r" 
 
 $file = ".json"
 $full_name = -join($name, $file)
@@ -20,7 +21,8 @@ $block_file_exists = Test-Path $block_path
 $item_file_exists = Test-Path $item_path
 
 if($blockstates_file_exists){
-	Write-Host "File exists at"$blockstates_path"! Not creating nor overwriting file"
+	Write-Host "File exists at"$blockstates_path"! Not creating nor overwriting file."
+	Write-Host "If you want to create a new file with the name"$name" at "$blockstates_path", you must delete the existing file."
 }else{
 	Write-Host "No file exists at"$blockstates_path" Creating new file."
 	New-Item $blockstates_path
@@ -57,9 +59,11 @@ if($blockstates_file_exists){
 	$json | Out-File $blockstates_path
 }
 
+Write-Host "`r"
 
 if($block_file_exists){
-	Write-Host "File exists at"$block_path"! Not creating nor overwriting file"
+	Write-Host "File exists at"$block_path"! Not creating nor overwriting file."
+	Write-Host "If you want to create a new file with the name"$name" at "$block_path", you must delete the existing file."
 }else{
 
 	Write-Host "No file exists at"$block_path" Creating new file."
@@ -81,8 +85,11 @@ if($block_file_exists){
 	$json | ConvertTo-Json | Out-File $block_path
 }
 
+Write-Host "`r"
+
 if($item_file_exists){
-	Write-Host "File exists at"$item_path"! Not creating nor overwriting file"
+	Write-Host "File exists at"$item_path"! Not creating nor overwriting file."
+	Write-Host "If you want to create a new file with the name"$name" at "$item_path", you must delete the existing file."
 }else{
 
 	Write-Host "No file exists at"$item_path" Creating new file."
