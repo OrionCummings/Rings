@@ -1,25 +1,3 @@
-{
-  "itemGroup.rings.advanced_group": "Rings",
-  "item.rings.ring": "Ring",
-  "item.rings.ruby_ring": "Ruby Ring",
-  "item.rings.ruby_ring.tooltip.subtext": "It seems to want to protect",
-  "item.rings.ruby_ring.tooltip.status": "Enabled: %s",
-  "item.rings.peridot_ring": "Peridot Ring",
-  "item.rings.peridot_ring.tooltip.subtext": "",
-  "item.rings.peridot_ring.tooltip.status": "Enabled: %s",
-  "item.rings.azurite_ring": "Azurite Ring",
-  "item.rings.azurite_ring.tooltip.subtext": "A ring full of movement",
-  "item.rings.azurite_ring.tooltip.status": "Enabled: %s",
-  "block.rings.ruby_ore": "Ruby Ore",
-  "item.rings.ruby": "Ruby",
-  "block.rings.ruby_block": "Ruby Block",
-  "block.rings.peridot_ore": "Peridot Ore",
-  "item.rings.peridot": "Peridot",
-  "block.rings.peridot_block": "Peridot Block",
-  "block.rings.azurite_ore": "Azurite Ore",
-  "item.rings.azurite": "Azurite",
-  "block.rings.azurite_block": "Azurite Block",
-  "block.rings.alexandrite_ore": "Alexandrite Ore",
-  "item.rings.alexandrite": "Alexandrite",
-  "block.rings.alexandrite_block": "Alexandrite Block"
+{ 	"itemGroup.rings.advanced_group": "Rings", 	"item.rings.ring": "Ring", 	"item.rings.ruby_ring": "Ruby Ring", 	"item.rings.ruby_ring.tooltip.subtext": "It seems to want to protect", 	"item.rings.ruby_ring.tooltip.status": "Enabled: %s", 	"item.rings.peridot_ring": "Peridot Ring", 	"item.rings.peridot_ring.tooltip.subtext": "", 	"item.rings.peridot_ring.tooltip.status": "Enabled: %s", 	"item.rings.azurite_ring": "Azurite Ring", 	"item.rings.azurite_ring.tooltip.subtext": "A ring full of movement", 	"item.rings.azurite_ring.tooltip.status": "Enabled: %s", 	"block.rings.ruby_ore": "Ruby Ore", 	"item.rings.ruby": "Ruby", 	"block.rings.ruby_block": "Ruby Block", 	"block.rings.peridot_ore": "Peridot Ore", 	"item.rings.peridot": "Peridot", 	"block.rings.peridot_block": "Peridot Block", 	"block.rings.azurite_ore": "Azurite Ore", 	"item.rings.azurite": "Azurite", 	"block.rings.azurite_block": "Azurite Block", 	"block.rings.alexandrite_ore": "Alexandrite Ore", 	"item.rings.alexandrite": "Alexandrite", 	"block.rings.alexandrite_block": "Alexandrite Block",
+  "item.rings.test_item": "Test Item"
 }

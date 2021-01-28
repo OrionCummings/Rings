@@ -45,7 +45,8 @@ public class ModItems{
         registerGems();
         registerOres();
         registerCommonRings();
-        registerGemBlocks();
+		registerGemBlocks();
+		registerNewItems();
     }
 
     private static void registerGemBlocks() {
@@ -72,4 +73,8 @@ public class ModItems{
         Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot"), PERIDOT);
         Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "alexandrite"), ALEXANDRITE);
     }
+	public static void registerNewItems(){
+		//Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, ""), );
+
+	}
 }
