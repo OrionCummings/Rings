@@ -46,6 +46,10 @@ public class Rings implements ModInitializer {
                 stacks.add(new ItemStack(ModItems.PERIDOT));
                 stacks.add(new ItemStack(ModItems.AZURITE));
                 stacks.add(new ItemStack(ModItems.ALEXANDRITE));
+                stacks.add(new ItemStack(ModItems.RUBY_BLOCK));
+                stacks.add(new ItemStack(ModItems.PERIDOT_BLOCK));
+                stacks.add(new ItemStack(ModItems.AZURITE_BLOCK));
+                stacks.add(new ItemStack(ModItems.ALEXANDRITE_BLOCK));
             }).build();
 
     //Ore Generator Values
@@ -90,7 +94,7 @@ public class Rings implements ModInitializer {
     @Override
     public void onInitialize() {
         //TrinketSlots.addSlot(SlotGroups.HAND, Slots.RING, new Identifier("trinkets", "textures/item/empty_trinket_slot_ring.png"));
-        System.out.println("Rings: Registered Trinkets API");
+        //System.out.println("Rings: Registered Trinkets API");
         ModItems.registerItems();
         System.out.println("Rings: Registered Items");
         ModBlocks.RegisterBlocks();

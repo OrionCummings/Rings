@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "rings:ring"
+  },
+  "addition": {
+    "item": "rings:peridot_block"
+  },
+  "result": {
+    "item": "rings:peridot_ring"
+  }
+}

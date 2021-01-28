@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "rings:ring"
+  },
+  "addition": {
+    "item": "rings:ruby_block"
+  },
+  "result": {
+    "item": "rings:ruby_ring"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "rings:ring"
+  },
+  "addition": {
+    "item": "rings:azurite_block"
+  },
+  "result": {
+    "item": "rings:azurite_ring"
+  }
+}

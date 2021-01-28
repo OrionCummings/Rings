@@ -25,9 +25,14 @@ public class ModItems{
     public static final BlockItem PERIDOT_ORE = new BlockItem(ModBlocks.PERIDOT_ORE, new Item.Settings().group(Rings.advanced_group));
     public static final BlockItem ALEXANDRITE_ORE = new BlockItem(ModBlocks.ALEXANDRITE_ORE, new Item.Settings().group(Rings.advanced_group));
 
+    //Gem Block Items
+    public static final BlockItem RUBY_BLOCK = new BlockItem(ModBlocks.RUBY_BLOCK, new Item.Settings().group(Rings.advanced_group));
+    public static final BlockItem PERIDOT_BLOCK = new BlockItem(ModBlocks.PERIDOT_BLOCK, new Item.Settings().group(Rings.advanced_group));
+    public static final BlockItem AZURITE_BLOCK = new BlockItem(ModBlocks.AZURITE_BLOCK, new Item.Settings().group(Rings.advanced_group));
+    public static final BlockItem ALEXANDRITE_BLOCK = new BlockItem(ModBlocks.ALEXANDRITE_BLOCK, new Item.Settings().group(Rings.advanced_group));
+
     //Common Rings
     public static final Item RING = new Item(new Item.Settings().group(Rings.advanced_group));
-
 
     //public static final Item RUBY_RING = new Item(new Item.Settings().group(Rings.advanced_group).rarity(Rarity.UNCOMMON).maxDamage(256));
     public static final Item RUBY_RING = new RubyRing(new Item.Settings());
@@ -37,22 +42,34 @@ public class ModItems{
     public static final Item AZURITE_RING = new AzuriteRing(new Item.Settings());
 
     public static void registerItems(){
-        //Gem Registration
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "azurite"), AZURITE);
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ruby"), RUBY);
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot"), PERIDOT);
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "alexandrite"), ALEXANDRITE);
+        registerGems();
+        registerOres();
+        registerCommonRings();
+        registerGemBlocks();
+    }
 
-        //Block Item Registration
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ruby_ore"), RUBY_ORE);
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "azurite_ore"), AZURITE_ORE);
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot_ore"), PERIDOT_ORE);
-        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
-
-        //Common Ring Registration
+    private static void registerGemBlocks() {
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ruby_block"), RUBY_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot_block"), PERIDOT_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "azurite_block"), AZURITE_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "alexandrite_block"), ALEXANDRITE_BLOCK);
+    }
+    private static void registerCommonRings() {
         Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ring"), RING);
         Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ruby_ring"), RUBY_RING);
         Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot_ring"), PERIDOT_RING);
         Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "azurite_ring"), AZURITE_RING);
+    }
+    private static void registerOres() {
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ruby_ore"), RUBY_ORE);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "azurite_ore"), AZURITE_ORE);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot_ore"), PERIDOT_ORE);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "alexandrite_ore"), ALEXANDRITE_ORE);
+    }
+    public static void registerGems(){
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "azurite"), AZURITE);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "ruby"), RUBY);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "peridot"), PERIDOT);
+        Registry.register(Registry.ITEM, new Identifier(Rings.MOD_ID, "alexandrite"), ALEXANDRITE);
     }
 }

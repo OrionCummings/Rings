@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rings:alexandrite"
+    }
+  },
+  "result": {
+    "item": "rings:alexandrite_block",
+    "count": 1
+  }
+}
