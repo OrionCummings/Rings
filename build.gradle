@@ -21,6 +21,8 @@ dependencies {
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
+
+	//modImplementation "com.github.emilyalexandra:trinkets:${trinkets_version}"
 }
 
 processResources {
@@ -78,5 +80,14 @@ publishing {
 	// To publish to maven local, no extra repositories are necessary. Just use the task `publishToMavenLocal`.
 	repositories {
 		// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+		/*
+		maven {
+			url = "https://jitpack.io"
+		}
+		maven {
+			name = "NerdHubMC"
+			url = "https://maven.abusedmaster.xyz/"
+		}
+		 */
 	}
 }

@@ -1,50 +1,73 @@
 package com.giantpotato.rings;
 
-import com.giantpotato.rings.registry.ModItems;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolItem;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Hand;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.world.World;
-
-import javax.tools.Tool;
 
 public class CommonRing extends Item {
 
-    //Common rings all have these attributes
+    //Common rings and their derivatives have these attributes
     public static final int durability = 256;
     public static final Rarity rarity = Rarity.UNCOMMON;
     public static ItemGroup group = Rings.advanced_group;
-    public static StatusEffect effect;
+    public static StatusEffect effect = null;
+    public static String name = null;
+    public static String MODE = "Default Mode";
 
-    public CommonRing(Settings settings) {
+    public CommonRing(Settings settings, String mode) {
         super(settings.group(group).rarity(rarity).maxDamage(durability));
+        this.MODE = mode;
     }
 
-    ///*
-    @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
-        if(playerEntity.isSprinting() &&
-                playerEntity.isHolding(ModItems.AZURITE_RING)){
-            StatusEffectInstance speed_effect = new StatusEffectInstance(
-                    StatusEffects.SPEED,
-                    10,
-                    1,
-                    false,
-                    false);
-            playerEntity.applyStatusEffect(speed_effect);
+    public enum Mode {
+        ACTIVE(true),
+        INACTIVE(false);
+
+        final boolean state;
+        Mode(boolean state)
+        {
+            this.state = state;
         }
-        return TypedActionResult.success(playerEntity.getStackInHand(hand));
+        public boolean getBoolean()
+        {
+            return state;
+        }
     }
-     //*/
+    public static void checkTag(ItemStack stack){
+        if (!stack.isEmpty()) {
+            if (!stack.hasTag()) {
+                stack.setTag(new CompoundTag());
+            }
+            CompoundTag nbt = stack.getTag();
 
+            if (!nbt.contains(MODE)) {
+                nbt.putBoolean(MODE, false);
+            }
+        }
+    }
+    public boolean isActive(ItemStack stack){ return getMode(stack).getBoolean(); }
+    public void toggleMode(ItemStack stack) {
+        Mode currentMode = getMode(stack);
+        if (currentMode.getBoolean()) {
+            setMode(stack, Mode.INACTIVE);
+            return;
+        }
+        setMode(stack, Mode.ACTIVE);
+    }
+    public static Mode getMode(ItemStack stack){
+        if(!stack.isEmpty()){
+            checkTag(stack);
 
+            return stack.getTag().getBoolean(MODE) ? Mode.ACTIVE : Mode.INACTIVE;
+        }
+        return Mode.INACTIVE;
+    }
+    public static void setMode(ItemStack stack, Mode mode){
+        checkTag(stack);
+        stack.getTag().putBoolean(MODE, mode.getBoolean());
+    }
 }

@@ -2,9 +2,12 @@
   "itemGroup.rings.advanced_group": "Rings",
   "item.rings.ring": "Ring",
   "item.rings.ruby_ring": "Ruby Ring",
+  "item.rings.ruby_ring.tooltip.subtext": "",
+  "item.rings.ruby_ring.tooltip.status": "Enabled: %s",
   "item.rings.peridot_ring": "Peridot Ring",
   "item.rings.azurite_ring": "Azurite Ring",
-  "item.rings.azurite_ring.tooltip": "A ring full of movement",
+  "item.rings.azurite_ring.tooltip.subtext": "A ring full of movement",
+  "item.rings.azurite_ring.tooltip.status": "Enabled: %s",
   "item.rings.ruby": "Ruby",
   "item.rings.peridot": "Peridot",
   "item.rings.azurite": "Azurite",
@@ -12,6 +15,5 @@
   "block.rings.azurite_ore": "Azurite Ore",
   "block.rings.ruby_ore": "Ruby Ore",
   "block.rings.peridot_ore": "Peridot Ore",
-  "block.rings.alexandrite_ore": "Alexandrite Ore",
-  "effect.rings.speed": "Speed"
+  "block.rings.alexandrite_ore": "Alexandrite Ore"
 }

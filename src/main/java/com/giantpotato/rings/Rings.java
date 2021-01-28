@@ -61,7 +61,6 @@ public class Rings implements ModInitializer {
     private static ConfiguredFeature<?, ?> ORE_ALEXANDRITE = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, ModBlocks.ALEXANDRITE_ORE.getDefaultState(), rareGemOre.getVeinSize())).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, rareGemOre.getMinY(), rareGemOre.getMaxY()))).spreadHorizontally().repeat(rareGemOre.getVeinsPerChunk());
 
     public static void registerOres(){
-        //Common Gems
         //Ruby Ore
         RegistryKey<ConfiguredFeature<?, ?>> oreRuby = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
                 new Identifier("rings", "ruby_ore"));
@@ -88,21 +87,16 @@ public class Rings implements ModInitializer {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAlexandrite);
     }
 
-    public static final StatusEffect RINGS_SPEED = new RingsSpeedEffect();
-
-    public static void registerStatusEffects(){
-        Registry.register(Registry.STATUS_EFFECT, new Identifier("rings", "speed"), RINGS_SPEED);
-    }
-
     @Override
     public void onInitialize() {
+        //TrinketSlots.addSlot(SlotGroups.HAND, Slots.RING, new Identifier("trinkets", "textures/item/empty_trinket_slot_ring.png"));
+        System.out.println("Rings: Registered Trinkets API");
         ModItems.registerItems();
         System.out.println("Rings: Registered Items");
         ModBlocks.RegisterBlocks();
         System.out.println("Rings: Registered Blocks");
-        registerStatusEffects();
-        System.out.println("Rings: Registered Status Effects");
         registerOres();
         System.out.println("Rings: Registered Ores");
+
     }
 }
