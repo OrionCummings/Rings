@@ -29,27 +29,26 @@ Holding all of your rings in your hotbar is quite difficult, especially when you
 ##### Not much is known about these gems save for their incredible power. No one even remembers the names of these most dangerous gemstones, only that there exists two types. There are ancient tales of those who tried to contain their power through the art of rings but they all end in failure. Nobody has seen a forbidden gem in ages and people seem to think they are fading into obscurity...
 
 
-### Ruby Ring Effects:
+### Ruby Ring Effects (I/II/III/IV/V):
+#### Fire Resistance
+#### Resistance
+#### Conduit Power
+#### Saturation
+#### Health Boost
+
+### Peridot Ring Effects (I/II/III/IV/V):
 #### Haste
 #### Strength
-#### Fire Resistance
-#### Health Boost
-#### Conduit Power
-
-### Peridot Ring Effects:
 #### Night Vision
-#### Resistance
-#### Invisibility
 #### Luck
-#### Saturation
+#### Invisibility
 
-### Azurite Ring Effects:
+### Azurite Ring Effects (I/II/III/IV/V):
 #### Speed
-#### Dolphin's Grace
 #### Jump Boost
-#### Slow Falling
+#### Dolphin's Grace
 #### Water Breathing
-
+#### Slow Falling
 
 
 
