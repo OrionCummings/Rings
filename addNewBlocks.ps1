@@ -1,6 +1,9 @@
 # PowerShell script to auto generate json files to aid in the addition of new blocks
+# Does not change en_us.json (yet)
 
-$name = "TEST_BLOCK"
+$name=$args[0]
+Write-Host "Attempting to create new block"$name"!" 
+
 $file = ".json"
 $full_name = -join($name, $file)
 
@@ -10,16 +13,16 @@ $item_path = "D:\Minecraft Mods\Rings\src\main\resources\assets\rings\models\ite
 
 $blockstates_path = -join($blockstates_path, $full_name)
 $block_path = -join($block_path, $full_name)
-$item_path = -join($base_path, $full_name)
+$item_path = -join($item_path, $full_name)
 
 $blockstates_file_exists = Test-Path $blockstates_path
 $block_file_exists = Test-Path $block_path
 $item_file_exists = Test-Path $item_path
 
 if($blockstates_file_exists){
-	Write-Host "File exists at "$blockstates_path"! Not creating nor overwriting file"
+	Write-Host "File exists at"$blockstates_path"! Not creating nor overwriting file"
 }else{
-	Write-Host "No file exists at "$blockstates_path" Creating new file."
+	Write-Host "No file exists at"$blockstates_path" Creating new file."
 	New-Item $blockstates_path
 
 	$modelString = "rings:blocks/"
@@ -56,10 +59,10 @@ if($blockstates_file_exists){
 
 
 if($block_file_exists){
-	Write-Host "File exists at "$block_path"! Not creating nor overwriting file"
+	Write-Host "File exists at"$block_path"! Not creating nor overwriting file"
 }else{
 
-	Write-Host "No file exists at "$block_path" Creating new file."
+	Write-Host "No file exists at"$block_path" Creating new file."
 
 	$allString = "rings:blocks/"
 	$allString = -join($allString, $name)
@@ -79,10 +82,10 @@ if($block_file_exists){
 }
 
 if($item_file_exists){
-	Write-Host "File exists at "$item_path"! Not creating nor overwriting file"
+	Write-Host "File exists at"$item_path"! Not creating nor overwriting file"
 }else{
 
-	Write-Host "No file exists at "$item_path" Creating new file."
+	Write-Host "No file exists at"$item_path" Creating new file."
 
 	$parentString = "rings:block/"
 	$parentString = -join($parentString, $name)

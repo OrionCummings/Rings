@@ -1,7 +1,10 @@
 # PowerShell script to auto generate json files to aid in the addition of new items
 # Does not change en_us.json (yet)
 
-$name = "TEST_ITEM"
+$name=$args[0]
+Write-Host "Attempting to create new item"$name"!" 
+
+#$name = "TEST_ITEM"
 $file = ".json"
 $full_name = -join($name, $file)
 $base_path = "D:\Minecraft Mods\Rings\src\main\resources\assets\rings\models\item\"
