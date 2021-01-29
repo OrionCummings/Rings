@@ -16,28 +16,27 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class RubyRing extends Ring {
-    public static final int TIER = 1;
-    public static String MODE = "Fire Resistance Mode";
-    public static final int DURABILITY = 256;
+public class RubyRing_Uncommon extends Ring{
+    public static final int TIER = 3;
+    public static String MODE = "Conduit Mode";
+    public static final int DURABILITY = 1024;
 
-    StatusEffectInstance fire_resistance_effect = new StatusEffectInstance(
-            StatusEffects.FIRE_RESISTANCE,
+    StatusEffectInstance conduit_effect = new StatusEffectInstance(
+            StatusEffects.CONDUIT_POWER,
             0,
             0,//temporary
             false,
             false);
 
-    public RubyRing(Settings settings) {
+    public RubyRing_Uncommon(Settings settings) {
         super(settings.maxDamage(DURABILITY));
-        //this.MODE = mode;
     }
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient() && isActive(stack)){
             PlayerEntity player = (PlayerEntity) entity;
-            player.applyStatusEffect(fire_resistance_effect);
+            player.applyStatusEffect(conduit_effect);
         }
     }
 
@@ -58,8 +57,9 @@ public class RubyRing extends Ring {
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         boolean status = isActive(itemStack);
         String out = (status) ? "On" : "Off";
-        tooltip.add(new TranslatableText("item.rings.ruby_ring.tooltip.subtext").formatted(Formatting.BLUE));
-        if(status){ tooltip.add(new TranslatableText("item.rings.ruby_ring.tooltip.status", out).formatted(Formatting.GREEN));
-        }else{ tooltip.add(new TranslatableText("item.rings.ruby_ring.tooltip.status", out).formatted(Formatting.RED)); }
+        tooltip.add(new TranslatableText("item.rings.ruby_ring_uncommon.tooltip.subtext").formatted(Formatting.BLUE));
+        if(status){ tooltip.add(new TranslatableText("item.rings.ruby_ring_uncommon.tooltip.status", out).formatted(Formatting.GREEN)); }
+        else{ tooltip.add(new TranslatableText("item.rings.ruby_ring_uncommon.tooltip.status", out).formatted(Formatting.RED)); }
     }
+
 }

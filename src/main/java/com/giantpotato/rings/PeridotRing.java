@@ -16,28 +16,24 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class RubyRing extends Ring {
-    public static final int TIER = 1;
-    public static String MODE = "Fire Resistance Mode";
-    public static final int DURABILITY = 256;
+public class PeridotRing extends Ring {
 
-    StatusEffectInstance fire_resistance_effect = new StatusEffectInstance(
-            StatusEffects.FIRE_RESISTANCE,
+    StatusEffectInstance haste_effect = new StatusEffectInstance(
+            StatusEffects.HASTE,
             0,
-            0,//temporary
+            2,//temporary
             false,
             false);
 
-    public RubyRing(Settings settings) {
-        super(settings.maxDamage(DURABILITY));
-        //this.MODE = mode;
+    public PeridotRing(Settings settings) {
+        super(settings);
     }
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient() && isActive(stack)){
             PlayerEntity player = (PlayerEntity) entity;
-            player.applyStatusEffect(fire_resistance_effect);
+            player.applyStatusEffect(haste_effect);
         }
     }
 
@@ -57,9 +53,8 @@ public class RubyRing extends Ring {
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         boolean status = isActive(itemStack);
-        String out = (status) ? "On" : "Off";
-        tooltip.add(new TranslatableText("item.rings.ruby_ring.tooltip.subtext").formatted(Formatting.BLUE));
-        if(status){ tooltip.add(new TranslatableText("item.rings.ruby_ring.tooltip.status", out).formatted(Formatting.GREEN));
-        }else{ tooltip.add(new TranslatableText("item.rings.ruby_ring.tooltip.status", out).formatted(Formatting.RED)); }
+        tooltip.add(new TranslatableText("item.rings.peridot_ring.tooltip.subtext").formatted(Formatting.BLUE));
+        tooltip.add(new TranslatableText("item.rings.peridot_ring.tooltip.status", status).formatted(Formatting.GREEN));
     }
+
 }

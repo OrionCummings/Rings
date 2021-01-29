@@ -103,7 +103,7 @@ if($item_file_exists){
 			Write-Host "`"$($item_string)`" not found in lang file! Registering as a new item!"
 		}
 	}
-
+<#
 	$json_item = ($name.ToString().ToLower() -replace "_", " ")
 	$json_item = (Get-Culture).TextInfo.ToTitleCase($json_item)
 	$json_tooltip = $tooltip
@@ -117,6 +117,6 @@ if($item_file_exists){
 	Set-Content -Path $lang_path $lang"," ##THIS WORKS BUT IT'S SHIT
 	Add-Content -Path $lang_path $addition
 	Add-Content -Path $lang_path "}"
-
+#>
 	Write-Host "`r"
 exit

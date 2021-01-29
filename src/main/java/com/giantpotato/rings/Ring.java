@@ -1,26 +1,29 @@
 package com.giantpotato.rings;
 
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Rarity;
 
-public class CommonRing extends Item {
+public class Ring extends Item {
 
-    //Common rings and their derivatives have these attributes
-    public static final int durability = 256;
-    public static final Rarity rarity = Rarity.UNCOMMON;
+    //All rings have these attributes
+    public static int durability;
     public static ItemGroup group = Rings.advanced_group;
     public static StatusEffect effect = null;
     public static String name = null;
     public static String MODE = "Default Mode";
+    public static int TIER = 0;
 
-    public CommonRing(Settings settings, String mode) {
-        super(settings.group(group).rarity(rarity).maxDamage(durability));
-        this.MODE = mode;
+    public Ring(Settings settings) {
+        super(settings.group(group).group(Rings.advanced_group));
+    }
+
+    @Override
+    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+        return true;
     }
 
     public enum Mode {

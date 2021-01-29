@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class AzuriteRing extends CommonRing {
+public class AzuriteRing extends Ring {
 
     StatusEffectInstance speed_effect = new StatusEffectInstance(
             StatusEffects.SPEED,
@@ -26,7 +26,7 @@ public class AzuriteRing extends CommonRing {
             false);
 
     public AzuriteRing(Settings settings) {
-        super(settings, "Speed Mode");
+        super(settings);
     }
 
     @Override
