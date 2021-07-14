@@ -8,12 +8,11 @@
 
 
 # List of New Items and Blocks
-
-## Ores
-### Azurite Ore
-### Peridot Ore
-### Ruby Ore
-### Alexandrite Ore
+### Ores
+Azurite Ore
+Peridot Ore
+Ruby Ore
+Alexandrite Ore
 
 ## Gems
 ### Azurite
