@@ -9,31 +9,38 @@
 
 # List of New Items and Blocks
 ### Ores
-Azurite Ore
-Peridot Ore
-Ruby Ore
+Azurite Ore,
+Peridot Ore,
+Ruby Ore,
 Alexandrite Ore
 
 ## Gems
-### Azurite
-### Peridot
-### Ruby
-### Alexandrite
+Azurite,
+Peridot,
+Ruby,
+Alexandrite
 
+## Items/Blocks
+Golden Ring
 
 # List of Rings
 
 # TODO
 
 ## Ores
-### Tanzanite Ore
-### Moonstone Ore
-### Black Opal Ore
+Tanzanite Ore,
+Moonstone Ore,
+Black Opal Ore
 
-## Items
-### Tanzanite
-### Moonstone
-### Black Opal
+## Gems
+Tanzanite,
+Moonstone,
+Black Opal
+
+## Items/Blocks
+Netherite Anvil,
+Elytra Block,
+Ring Pouch (I/II/III)
 
 # Downloads
 
